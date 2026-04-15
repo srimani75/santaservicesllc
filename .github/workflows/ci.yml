@@ -40,7 +40,8 @@ jobs:
   deploy:
     name: Deploy to Vercel (Production)
     needs: ci
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # Hard rule: production deploys only from main branch pushes.
+    if: github.event_name == 'push' && github.ref_name == 'main'
     runs-on: ubuntu-latest
     env:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
