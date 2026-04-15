@@ -85,7 +85,7 @@ sequenceDiagram
   HP->>HP: Build services + approach in memory
   HP->>HP: Render SiteHeader, sections, SiteFooter
   Next-->>Browser: HTML + CSS + font preload
-  Note over Browser: Nav clicks use hash anchors; no full page load
+  Note over Browser: Nav clicks use hash anchors and do not reload the page
 ```
 
 ---
